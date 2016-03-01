@@ -1,4 +1,4 @@
-docs = require('../docs').docs
+docs = require('../docs')
 docsURL = 'http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/'
 
 module.exports =
@@ -14,29 +14,30 @@ module.exports =
 
   # Required: Return a promise, an array of suggestions, or null.
   getSuggestions: (request) ->
-    suggestions = []
+    new Promise (resolve) ->
+      suggestions = []
 
-    # we aren't case sensetive
-    request.prefix = request.prefix.toLowerCase()
+      # we aren't case sensetive
+      # request.prefix = request.prefix.toLowerCase()
 
-    # grab the item in the docs that match
-    for item in docs
-      text = item.text.toLowerCase()
-      if text.indexOf(request.prefix) > -1
-        suggestions.push
-          text: item.text
-          description: item.info
-          descriptionMoreURL: docsURL+item.url
-          type: 'function'
-          _rank: item.text.length-request.prefix.length
+      # grab the item in the docs that match
+      for item in docs
+        # text = item.displayText.toLowerCase()
+        if item.displayText.indexOf(request.prefix) > -1
+          add = item
+          add.descriptionMoreURL = docsURL+add.descriptionMoreURL;
+          add.replacementPrefix = request.prefix
+          suggestions.push item
 
-    # sort them so that OnFwd comes before OnFwdReg
-    suggestions.sort (a, b) ->
-      if a._rank < b._rank
-        return -1
-      else if a._rank > b._rank
-        return 1
-      else return 0
+      # sort them so that OnFwd comes before OnFwdReg
+      suggestions.sort (a, b) ->
+        if a.displayText.length < b.displayText.length
+          return -1
+        else if a.displayText.length > b.displayText.length
+          return 1
+        else return 0
 
-    # return the suggestions
-    return suggestions
+      # return the suggestions
+      console.log suggestions
+      resolve suggestions
+      # resolve [{text: 'just a sugestion'}]

@@ -41,9 +41,3 @@
   'any function':
     'prefix': 'func'
     'body': '${1:int} ${2:name}(${3:/* arguments */}) {\n\t${5:/* code */}\n\treturn ${4:0};\n}'
-  'OnFwd':
-    'prefix': 'OnFwd'
-    'body': 'OnFwd(OUT_$1,${2:speed});'
-  'OnRev':
-    'prefix': 'OnRev'
-    'body': 'OnRev(OUT_$1,${2:speed});'
