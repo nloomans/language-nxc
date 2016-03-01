@@ -5,9 +5,9 @@ module.exports =
   # This will work on JavaScript and CoffeeScript files, but not in js comments.
   selector: '.source.nxc'
   disableForSelector: '.source.nxc .comment'
+  # `excludeLowerPriority` will suppress any providers with a lower priority
 
   # This will take priority over the default provider, which has a priority of 0.
-  # `excludeLowerPriority` will suppress any providers with a lower priority
   # i.e. The default provider will be suppressed
   inclusionPriority: 1
   excludeLowerPriority: false
