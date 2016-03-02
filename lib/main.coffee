@@ -6,6 +6,9 @@ module.exports =
     useEnhancedFirmware:
       type: 'boolean'
       default: false
+    allowOtherAutocompleationProvidors:
+      type: 'boolean'
+      default: true
 
   getProvider: -> Provider
 
