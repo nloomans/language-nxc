@@ -12,4 +12,4 @@ pull request to add snippets, make grammar tweaks, etc.
   - link to docs
 - built-in (cross-platform) compiling and uploading, try "nxc:upload"
 
-![Example Usage](http://i.imgur.com/nQBaFhC.gif)
+![Example Usage](http://i.imgur.com/I1v9dMs.gif)
