@@ -41,6 +41,24 @@ module.exports =
           text: line.split(" ")[1]
           type: 'constant'
 
+    varRegEx = /(?:byte|string|bool|char|double|float|int|long|short)[ ]+([\w]+)/g
+    editorText = atom.workspace.getActivePaneItem().buffer.getText()
+    while true
+      currentVar = varRegEx.exec(editorText)
+      break unless currentVar?
+
+
+      addThisOne = true
+      for func in @localDocs[path]
+        if func.displayText? && currentVar[1] == func.displayText
+          addThisOne = false
+
+      @localDocs[path].push
+        text: currentVar[1]
+        type: 'variable'
+
+
+    # console.log vars
     # console.log @localDocs
 
 
