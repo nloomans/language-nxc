@@ -9,6 +9,9 @@ module.exports =
     allowOtherAutocompleationProvidors:
       type: 'boolean'
       default: true
+    showReturnTypeInAutocompleation:
+      type: 'boolean'
+      default: false
 
   getProvider: -> Provider
 

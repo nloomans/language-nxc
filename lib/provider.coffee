@@ -102,6 +102,9 @@ module.exports =
         return 1
       else return 0
 
+    if !atom.config.get 'language-nxc.showReturnTypeInAutocompleation'
+      for suggestion in suggestions
+        suggestion.leftLabel = null
     # return the suggestions
     return suggestions
     # resolve [{text: 'just a sugestion'}]
