@@ -7,14 +7,20 @@ module.exports =
   disableForSelector: '.source.nxc .comment'
   # `excludeLowerPriority` will suppress any providers with a lower priority
 
-  # This will take priority over the default provider, which has a priority of 0.
-  # i.e. The default provider will be suppressed
   inclusionPriority: 1
-  excludeLowerPriority: !atom.config.get 'language-nxc.allowOtherAutocompleationProvidors'
+  excludeLowerPriority:
+    !atom.config.get 'language-nxc.allowOtherAutocompleationProvidors'
 
   watchingDocuments: {}
 
   localDocs: {}
+
+  lastShowReturnTypeInAutocompleation:
+    atom.config.get 'language-nxc.showReturnTypeInAutocompleation'
+
+  updateDocs: ->
+    console.log 'updating docs'
+    @docs = require('../docs')
 
   updateLocalDocs: ->
     editor = atom.workspace.getActivePaneItem()
@@ -83,7 +89,7 @@ module.exports =
     # request.prefix = request.prefix.toLowerCase()
 
     # grab the item in the docs that match
-    for item in docs
+    for item in @docs
       # text = item.displayText.toLowerCase()
       if item.displayText.indexOf(request.prefix) > -1
         add = item
@@ -121,9 +127,18 @@ module.exports =
         return 1
       else return 0
 
-    if !atom.config.get 'language-nxc.showReturnTypeInAutocompleation'
+    showReturnType =
+      atom.config.get 'language-nxc.showReturnTypeInAutocompleation'
+    if @lastShowReturnTypeInAutocompleation != showReturnType &&
+          atom.config.get 'language-nxc.showReturnTypeInAutocompleation'
+        @updateDocs()
+    if !showReturnType
       for suggestion in suggestions
         suggestion.leftLabel = null
+
+    @lastShowReturnTypeInAutocompleation =
+      atom.config.get 'language-nxc.showReturnTypeInAutocompleation'
+
     # return the suggestions
     return suggestions
     # resolve [{text: 'just a sugestion'}]

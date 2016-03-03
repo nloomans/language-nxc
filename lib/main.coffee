@@ -16,6 +16,7 @@ module.exports =
   getProvider: -> Provider
 
   activate: ->
+    Provider.updateDocs()
     atom.commands.add 'atom-workspace',
       'nxc:compile': => @compile()
       'nxc:upload': => @upload()
