@@ -79,4 +79,4 @@ module.exports =
                     "shooting tips at https://goo.gl/lWWy0s"
             dismissable: true
       else
-          atom.notifications.addSuccess "Sucsesful!"
+          atom.notifications.addSuccess "Succesfull!"
