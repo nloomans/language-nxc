@@ -87,7 +87,8 @@ module.exports =
       # text = item.displayText.toLowerCase()
       if item.displayText.indexOf(request.prefix) > -1
         add = item
-        add.descriptionMoreURL = docsURL+add.descriptionMoreURL;
+        if add.descriptionMoreURL.indexOf(docsURL) == -1
+          add.descriptionMoreURL = docsURL+add.descriptionMoreURL;
         add.replacementPrefix = request.prefix
         suggestions.push add
 
