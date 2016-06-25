@@ -1,24 +1,21 @@
 # NXC language support in Atom
 
-Adds syntax highlighting, auto completion, comping, and snippets to NXC files in Atom.
-
-Contributions are greatly appreciated. Please fork this repository and open a
-pull request to add snippets, make grammar tweaks, etc.
+language-nxc makes it easier to develop in NXC, which requires little to no setup (depending on your OS / distribution). Its goal is to make developing for NXC easier for everyone.
 
 ## Features
-### syntax highlighting
+### Comping and uploading
+built-in (cross-platform) compiling and uploading, try `nxc:upload`. **This works on Linux as well!**
 
-![syntax highlighting](http://i.imgur.com/SrMTC46.png)
+![menu](http://i.imgur.com/92Gd8cA.png)
+![bug](http://i.imgur.com/6yuUSmT.png)
 
-### auto completion
+### Auto completion
 auto completion for ~~built in~~ **all** functions
 - description
 - link to docs
 
 ![Example Usage](http://i.imgur.com/I1v9dMs.gif)
 
-### comping and uploadiing
-built-in (cross-platform) compiling and uploading, try "nxc:upload"
+### Syntax highlighting
 
-![menu](http://i.imgur.com/92Gd8cA.png)
-![bug](http://i.imgur.com/6yuUSmT.png)
+![syntax highlighting](http://i.imgur.com/SrMTC46.png)
