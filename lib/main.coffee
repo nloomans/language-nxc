@@ -1,4 +1,4 @@
-Provider = require './provider'
+Provider = require './providor'
 
 module.exports =
 
