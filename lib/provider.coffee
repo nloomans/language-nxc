@@ -26,7 +26,7 @@ module.exports =
     editor = atom.workspace.getActivePaneItem()
     path = editor.buffer.file.path
     @localDocs[path] = []
-    for line in editor.buffer.lines
+    for line in editor.buffer.getLines()
       # is this a function?
       func = /((?:(?:signed|unsigned)[ ]+)*(?:byte|string|bool|char|double|float|int|long|short|void))[ ]+([A-Za-z]+)[ ]*\(([^)]*)\)/.exec line
       if func?
