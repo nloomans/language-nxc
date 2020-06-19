@@ -53,3 +53,6 @@
   'OnRev':
     'prefix': 'OnRev'
     'body': 'OnRev(OUT_${1:A},${2:power});'
+  'SetSensorUltrasonic':
+    'prefix': 'SetSensorUltrasonic'
+    'body': 'SetSensorUltrasonic(IN_${1:1});'
