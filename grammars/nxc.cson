@@ -173,7 +173,7 @@
     ]
   }
   {
-    'begin': '^\\s*(?:((#)\\s*(?:define|elif|else|endif|if|ifdef|ifndef))|((#)\\s*(pragma|undef)))\\b'
+    'begin': '^\\s*(?:((#)\\s*(?:elif|else|endif|if|ifdef|ifndef))|((#)\\s*(pragma|undef)))\\b'
     'beginCaptures':
       '1':
         'name': 'keyword.control.directive.conditional.nxc'
