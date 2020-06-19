@@ -50,3 +50,6 @@
   'OnFwd':
     'prefix': 'OnFwd'
     'body': 'OnFwd(OUT_${1:A},${2:power});'
+  'OnRev':
+    'prefix': 'OnRev'
+    'body': 'OnRev(OUT_${1:A},${2:power});'
