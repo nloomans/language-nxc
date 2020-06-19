@@ -24,10 +24,4 @@ auto completion for ~~built in~~ **all** functions
 
 ### Enhanced firmware usage
 
-For using the enhanced NXT firmware you have to open the `atom.config.cson` file and add at the end of this one these lines:
-
-<pre>
-"language-nxc":
-  useEnhancedFirmware: true
-</pre>
-To open the `atom.config.cson` file, go to File/Settings and click on `Open Config Folder`.
+For using the enhanced NXT firmware, go to File/Settings/Packages and click on `Settings` in language-nxc package, then activate the `Use Enhanced Firmware` check box.
