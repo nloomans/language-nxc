@@ -18,11 +18,11 @@
     'include': '#comments'
   }
   {
-    'match': '\\b(break|case|until|continue|default|do|else|for|goto|if|_Pragma|return|switch|while)\\b'
+    'match': '\\b(break|case|until|continue|default|do|else|for|goto|if|_Pragma|repeat|return|switch|while)\\b'
     'name': 'keyword.control.nxc'
   }
   {
-    'match': '\\b(byte|string|asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\b'
+    'match': '\\b(byte|string|asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|mutex|priority|safecall|short|signed|start|stop|struct|sub|task|typedef|union|unsigned|void)\\b'
     'name': 'storage.type.nxc'
   }
   {
@@ -112,7 +112,7 @@
     ]
   }
   {
-    'begin': '^\\s*((#)\\s*(include|import))\\b\\s*'
+    'begin': '^\\s*((#)\\s*(download|include|import))\\b\\s*'
     'beginCaptures':
       '1':
         'name': 'keyword.control.directive.$3.nxc'
@@ -173,7 +173,7 @@
     ]
   }
   {
-    'begin': '^\\s*(?:((#)\\s*(?:elif|else|if|ifdef|ifndef))|((#)\\s*(pragma|undef)))\\b'
+    'begin': '^\\s*(?:((#)\\s*(?:define|elif|else|endif|if|ifdef|ifndef))|((#)\\s*(pragma|undef)))\\b'
     'beginCaptures':
       '1':
         'name': 'keyword.control.directive.conditional.nxc'

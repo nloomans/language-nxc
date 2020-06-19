@@ -11,6 +11,9 @@
   'While Loop':
     'prefix': 'while'
     'body': 'while (${1:/* condition */}) {\n\t${2:/* code */}\n}'
+  'Repeat Loop':
+    'prefix': 'repeat'
+    'body': 'repeat (${1:/* times */}) {\n\t${2:/* code */}\n}'
   'NumOut':
     'prefix': 'NumOut'
     'body': 'NumOut(0,LCD_LINE${1:1},${2:number});'
@@ -41,3 +44,6 @@
   'any function':
     'prefix': 'func'
     'body': '${1:int} ${2:name}(${3:/* arguments */}) {\n\t${5:/* code */}\n\treturn ${4:0};\n}'
+  'sub function':
+    'prefix': 'sub'
+    'body': '${1:sub} ${2:name}(${3:/* arguments */}) {\n\t${5:/* code */}\n}'
