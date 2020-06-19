@@ -9,7 +9,7 @@ built-in (cross-platform) compiling and uploading, try `nxc:upload`. **This work
 ![menu](http://i.imgur.com/92Gd8cA.png)
 ![bug](http://i.imgur.com/6yuUSmT.png)
 
-The shortcut for `nxc:upload` is Ctrl + Alt + u.
+The shortcut for `nxc:upload` is Ctrl+Alt+U
 
 ### Auto completion
 auto completion for ~~built in~~ **all** functions
@@ -24,9 +24,10 @@ auto completion for ~~built in~~ **all** functions
 
 ### Enhanced firmware usage
 
-For using the enhanced NXT firmware you have to open the "atom.config.cson" file and add at the end of this one these lines:
+For using the enhanced NXT firmware you have to open the `atom.config.cson` file and add at the end of this one these lines:
 
 "language-nxc":
+
   useEnhancedFirmware: true
 
-To open the "atom.config.cson" file, go to File/Settings and click on "Open Config Folder".
+To open the `atom.config.cson` file, go to File/Settings and click on `Open Config Folder`.
