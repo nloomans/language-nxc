@@ -62,3 +62,6 @@
   'MotorTachoCount':
     'prefix': 'MotorTachoCount'
     'body': 'MotorTachoCount(OUT_${1:A});'
+  'NumToStr':
+    'prefix': 'NumToStr'
+    'body': 'NumToStr(${1:number});'
