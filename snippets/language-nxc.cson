@@ -13,7 +13,7 @@
     'body': 'while (${1:/* condition */}) {\n\t${2:/* code */}\n}'
   'Repeat Loop':
     'prefix': 'repeat'
-    'body': 'repeat (${1:/* times */}) {\n\t${2:/* code */}\n}'
+    'body': 'repeat (${1:times}) {\n\t${2:/* code */}\n}'
   'NumOut':
     'prefix': 'NumOut'
     'body': 'NumOut(0,LCD_LINE${1:1},${2:number});'
