@@ -9,7 +9,7 @@ built-in (cross-platform) compiling and uploading, try `nxc:upload`. **This work
 ![menu](http://i.imgur.com/92Gd8cA.png)
 ![bug](http://i.imgur.com/6yuUSmT.png)
 
-The shortcut for `nxc:upload` is Ctrl+Alt+U
+The keybinding (shortcut) for `nxc:upload` is Ctrl+Alt+U
 
 ### Auto completion
 auto completion for ~~built in~~ **all** functions
