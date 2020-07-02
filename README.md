@@ -9,6 +9,8 @@ built-in (cross-platform) compiling and uploading, try `nxc:upload`. **This work
 ![menu](http://i.imgur.com/92Gd8cA.png)
 ![bug](http://i.imgur.com/6yuUSmT.png)
 
+The keybinding (shortcut) for `nxc:upload` is Ctrl+Alt+U
+
 ### Auto completion
 auto completion for ~~built in~~ **all** functions
 - description
@@ -19,3 +21,7 @@ auto completion for ~~built in~~ **all** functions
 ### Syntax highlighting
 
 ![syntax highlighting](http://i.imgur.com/SrMTC46.png)
+
+### Enhanced firmware usage
+
+For using the enhanced NXT firmware, go to File/Settings/Packages and click on `Settings` in language-nxc package, then activate the `Use Enhanced Firmware` check box.
